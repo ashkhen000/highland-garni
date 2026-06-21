@@ -96,9 +96,9 @@ export function Homepage() {
         </div>
       </section>
 
-      <div className="section-mist border-t border-border/60">
+      {/* <div className="section-mist border-t border-border/60">
         <Amenities />
-      </div>
+      </div> */}
 
       <div className="section-stone border-t border-border/60">
         <Contact />
