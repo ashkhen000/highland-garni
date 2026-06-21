@@ -27,7 +27,7 @@ export function About() {
 
           <dl className="mt-14 grid grid-cols-3 gap-6 border-t border-border pt-10">
             {[
-              { v: "04", k: t("about.stat1") },
+              { v: "02", k: t("about.stat1") },
               { v: "28", k: t("about.stat2") },
               { v: "∞", k: t("about.stat3") },
             ].map((s) => (
