@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "home": "Home",
+    "gallery": "Gallery",
+    "about": "About",
+    "amenities": "Amenities",
+    "reserve": "Reserve",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "Garni · Armenia",
+    "title": "Highland Garni",
+    "subtitle": "A premium triangle-house retreat suspended between basalt cliffs and open Armenian sky.",
+    "reserve": "Reserve Now",
+    "contact": "Contact Us",
+    "scroll": "Scroll"
+  },
+  "gallery": {
+    "eyebrow": "The Property",
+    "title": "Spaces carved for stillness",
+    "subtitle": "Architectural triangle cabins, panoramic glass, and a quiet that only a mountain can give you.",
+    "browse": "Browse the collection",
+    "viewAll": "View all images",
+    "back": "All collections",
+    "categories": {
+      "interiors": "Interiors",
+      "interiorsDesc": "Warm timber, tall glass, fireplaces lit at dusk.",
+      "exteriors": "Exteriors",
+      "exteriorsDesc": "Triangle cabins set against basalt cliffs.",
+      "views": "Views & Pool",
+      "viewsDesc": "Infinity edge, mountain horizons, open sky."
+    }
+  },
+  "about": {
+    "eyebrow": "Our Story",
+    "title": "Where the gorge meets the sky",
+    "p1": "Highland Garni is a small collection of triangle houses set on a ridge above the Garni gorge, where basalt columns fall to the river and the mountains hold the horizon.",
+    "p2": "Each cabin is built around a single idea: a quiet room, a tall window, and a view that doesn't ask anything of you.",
+    "p3": "Come to slow down. Walk to the temple, drive to the monastery, or stay in and let the weather move across the valley.",
+    "stat1": "Cabins",
+    "stat2": "Min from Yerevan",
+    "stat3": "Stars overhead"
+  },
+  "amenities": {
+    "eyebrow": "Amenities",
+    "title": "Everything considered",
+    "pool": "Swimming Pool",
+    "wifi": "High-speed WiFi",
+    "parking": "Private Parking",
+    "ac": "Air Conditioning",
+    "bbq": "BBQ Area",
+    "kitchen": "Full Kitchen",
+    "view": "Mountain View",
+    "family": "Family Friendly"
+  },
+  "reserve": {
+    "eyebrow": "Reservations",
+    "title": "Book your stay",
+    "subtitle": "Pending and approved dates are blocked automatically.",
+    "fullName": "Full name",
+    "phone": "Phone number",
+    "email": "Email",
+    "guests": "Number of guests",
+    "checkIn": "Check-in",
+    "checkOut": "Check-out",
+    "notes": "Additional notes (optional)",
+    "submit": "Request Reservation",
+    "submitting": "Sending…",
+    "pickDate": "Pick a date",
+    "success": "Reservation received. We'll be in touch shortly.",
+    "errorRange": "Selected dates overlap an existing reservation.",
+    "errorInvalid": "Check-out must be after check-in."
+  },
+  "validation": {
+    "required": "This field is required",
+    "email": "Enter a valid email address",
+    "phone": "Enter a valid phone number",
+    "guests": "Enter a number between 1 and 12"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Get in touch",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "sent": "Thank you. We received your message.",
+    "phone": "Phone",
+    "emailLabel": "Email",
+    "address": "Garni, Kotayk Province, Armenia"
+  },
+  "successPage": {
+    "title": "Reservation received",
+    "subtitle": "Thank you for choosing Highland Garni. Our team will confirm your dates within 24 hours.",
+    "reference": "Your reservation reference",
+    "back": "Back to home"
+  },
+  "footer": {
+    "tagline": "A premium mountain retreat in Garni, Armenia.",
+    "navigate": "Navigate",
+    "contact": "Contact",
+    "follow": "Follow",
+    "rights": "All rights reserved."
+  },
+  "language": {
+    "label": "Language",
+    "en": "English",
+    "hy": "Հայերեն"
+  }
+}

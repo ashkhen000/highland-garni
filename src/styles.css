@@ -1,0 +1,185 @@
+@import "tailwindcss";
+@import "tw-animate-css"; /* Moved this up */
+
+@source "../src";
+
+@custom-variant dark (&:is(.dark *));
+/* ... the rest of your styles ... */
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --font-display: "Cormorant Garamond", "Noto Serif Armenian", Georgia, serif;
+  --font-sans: "Inter", "Noto Sans Armenian", system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.25rem;
+
+  /* Highland Garni — balanced monochrome with visible stone gradients */
+  --background: oklch(0.985 0.003 90);         /* pearl white */
+  --foreground: oklch(0.13 0 0);
+
+  --card: oklch(0.94 0.006 85);                /* soft ivory */
+  --card-foreground: oklch(0.13 0 0);
+
+  --popover: oklch(0.98 0.004 80);
+  --popover-foreground: oklch(0.13 0 0);
+
+  --primary: oklch(0.12 0 0);
+  --primary-foreground: oklch(0.98 0.004 80);
+
+  --secondary: oklch(0.90 0.008 80);
+  --secondary-foreground: oklch(0.13 0 0);
+
+  --muted: oklch(0.88 0.006 80);
+  --muted-foreground: oklch(0.40 0.004 75);
+
+  --accent: oklch(0.84 0.01 75);
+  --accent-foreground: oklch(0.13 0 0);
+
+  --destructive: oklch(0.55 0.18 25);
+  --destructive-foreground: oklch(0.98 0 0);
+
+  --border: oklch(0.78 0.006 80);
+  --input: oklch(0.78 0.006 80);
+  --ring: oklch(0.50 0 0);
+
+  /* Tonal palette used by section gradients */
+  --tone-pearl: oklch(0.985 0.003 90);
+  --tone-mist:  oklch(0.91 0.008 245);         /* cool stone mist */
+  --tone-stone: oklch(0.78 0.01 75);           /* visible warm stone */
+  --tone-sand:  oklch(0.87 0.014 85);          /* pale mountain sand */
+  --tone-deep:  oklch(0.16 0 0);               /* charcoal band */
+
+  --sidebar: oklch(0.95 0 0);
+  --sidebar-foreground: oklch(0.12 0 0);
+  --sidebar-primary: oklch(0.10 0 0);
+  --sidebar-primary-foreground: oklch(0.97 0 0);
+  --sidebar-accent: oklch(0.94 0 0);
+  --sidebar-accent-foreground: oklch(0.12 0 0);
+  --sidebar-border: oklch(0.88 0 0);
+  --sidebar-ring: oklch(0.50 0 0);
+}
+
+.dark {
+  --background: oklch(0.08 0 0);
+  --foreground: oklch(0.97 0 0);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    font-weight: 400;
+  }
+}
+
+@utility container-px {
+  padding-inline: 1.25rem;
+  @media (min-width: 768px) { padding-inline: 2.5rem; }
+  @media (min-width: 1280px) { padding-inline: 5rem; }
+}
+
+@utility eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--color-muted-foreground);
+}
+
+/* Section gradient bands — each clearly distinct from neighbours */
+@utility page-hero {
+  background:
+    radial-gradient(circle at 78% 18%, color-mix(in oklab, var(--tone-deep) 16%, transparent) 0%, transparent 34%),
+    linear-gradient(135deg, var(--tone-stone) 0%, var(--tone-sand) 48%, var(--tone-pearl) 100%);
+}
+
+
+@utility section-mist {
+  background:
+    radial-gradient(circle at 12% 8%, color-mix(in oklab, var(--tone-deep) 12%, transparent) 0%, transparent 30%),
+    linear-gradient(145deg, var(--tone-pearl) 0%, var(--tone-mist) 52%, var(--tone-stone) 100%);
+}
+
+@utility section-soft {
+  background:
+    radial-gradient(circle at 85% 20%, color-mix(in oklab, var(--tone-sand) 70%, transparent) 0%, transparent 32%),
+    linear-gradient(180deg, var(--tone-pearl) 0%, var(--tone-sand) 48%, var(--tone-mist) 100%);
+}
+
+@utility section-warm {
+  background:
+    radial-gradient(circle at 18% 0%, color-mix(in oklab, var(--tone-deep) 10%, transparent) 0%, transparent 28%),
+    linear-gradient(135deg, var(--tone-sand) 0%, var(--tone-stone) 58%, var(--tone-mist) 100%);
+}
+
+@utility section-stone {
+  background:
+    radial-gradient(circle at 86% 86%, color-mix(in oklab, var(--tone-pearl) 70%, transparent) 0%, transparent 32%),
+    linear-gradient(160deg, var(--tone-stone) 0%, var(--tone-sand) 54%, var(--tone-pearl) 100%);
+}
+
+@utility section-deep {
+  background: linear-gradient(180deg,
+    color-mix(in oklab, var(--tone-deep) 92%, var(--tone-sand) 8%) 0%,
+    var(--tone-deep) 100%);
+  color: oklch(0.98 0 0);
+}
+
+/* A slim horizontal "band" used between two sections to visually separate */
+@utility section-divider {
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    color-mix(in oklab, var(--color-foreground) 25%, transparent) 50%,
+    transparent 100%);
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slow-zoom {
+  from { transform: scale(1.05); }
+  to { transform: scale(1.15); }
+}
+.animate-fade-up { animation: fade-up 0.9s cubic-bezier(.2,.7,.2,1) both; }
+.animate-slow-zoom { animation: slow-zoom 20s ease-in-out infinite alternate; }
+
