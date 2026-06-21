@@ -47,7 +47,7 @@ export function Footer() {
               {[Instagram, Facebook, Send].map((Icon, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href="https://www.instagram.com/highlandhills.arm"
                   aria-label="social"
                   className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border transition-colors hover:bg-foreground hover:text-background"
                 >
